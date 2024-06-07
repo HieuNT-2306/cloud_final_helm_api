@@ -1,7 +1,7 @@
 replicaCount: 1
 image:
   repository: hieubeo2369/api
-  tag: latest
+  tag: v1.0.0-dev.v2
   pullPolicy: IfNotPresent
 service:
   type: NodePort
