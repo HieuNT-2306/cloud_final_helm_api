@@ -12,7 +12,18 @@ env:
   MONGO_URL: mongodb+srv://hieunt230603:33nwHHbBTAYtlOvq@cluster0.upbvhyg.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
   JWT_SECRET: khongchobiethjhj
 ingress:
-  enabled: false
+  enabled: true
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+  hosts:
+    - host: 192-168-49-2.nip.io
+      paths:
+        - path: /api
+          pathType: Prefix
+  tls:
+    - secretName: tls-secret
+      hosts:
+        - 192-168-49-2.nip.io
 resources: {}
 nodeSelector: {}
 tolerations: []
