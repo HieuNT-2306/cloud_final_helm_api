@@ -10,7 +10,7 @@ service:
   webPort: 30001
 env:
   MONGO_URL: mongodb+srv://hieunt230603:33nwHHbBTAYtlOvq@cluster0.upbvhyg.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
-  JSW_SECRET: khongchobiethjhj
+  JWT_SECRET: khongchobiethjhj
 ingress:
   enabled: false
 resources: {}
