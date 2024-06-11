@@ -25,3 +25,5 @@ spec:
               value: {{ .Values.env.MONGO_URL }}
             - name: CLIENT_URL
               value: http://192.168.49.2:{{ .Values.service.webPort }}
+            - name: JWT_SECRET
+              value: {{ .Values.env.JWT_SECRET}}
