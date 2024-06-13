@@ -9,7 +9,6 @@ spec:
     - port: {{ .Values.service.port }}
       targetPort: 5003
       protocol: TCP
-      # targetPort: 5003
       nodePort: {{ .Values.service.nodePort }}
   selector:
     app: {{ include "api.fullname" . }}
