@@ -18,18 +18,18 @@ env:
   MONGO_URL: mongodb+srv://hieunt230603:33nwHHbBTAYtlOvq@cluster0.upbvhyg.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
   JWT_SECRET: khongchobiethjhj
 ingress:
-  enabled: false
-  # annotations:
-  #   nginx.ingress.kubernetes.io/ssl-redirect: "true"
-  # hosts:
-  #   - host: vdt.local
-  #     paths: 
-  #       - path: /api
-  #         pathType: ImplementationSpecific
-  # tls:
-  #   - secretName: web-tls
-  #     hosts:
-  #       - vdt.local
+  enabled: true
+  className: nginx
+  annotations: {}
+  hosts:
+    - host: vdt.app.api.com
+      paths:
+        - path: /
+          pathType: Prefix
+  tls:
+    - secretName: tls-secret
+      hosts:
+        - vdt.app.api.com
 resources: {}
 nodeSelector: {}
 tolerations: []
