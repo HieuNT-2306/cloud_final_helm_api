@@ -51,10 +51,10 @@ spec:
               service:
                 name: {{ $fullName }}
                 port:
-                  number: 5003
+                  number: {{ $svcPort }}
               {{- else }}
               serviceName: {{ $fullName }}
-              servicePort: 5003
+              servicePort: {{ $svcPort }}
               {{- end }}
           {{- end }}
     {{- end }}
