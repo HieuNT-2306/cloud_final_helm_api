@@ -4,10 +4,10 @@ image:
   tag: v1.2.1-fix-api
   pullPolicy: IfNotPresent
 #Thêm haproxy sidecar
-haproxy:
-  image: haproxy:latest
-  port: 443
-  sslSecretName: haproxy-ssl
+# haproxy:
+#   image: haproxy:latest
+#   port: 443
+#   sslSecretName: haproxy-ssl
 
 service:
   type: NodePort
