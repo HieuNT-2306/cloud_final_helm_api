@@ -7,7 +7,7 @@ spec:
   type: {{ .Values.service.type }}
   ports:
     - port: {{ .Values.service.port }}
-      targetPort: 443
+      targetPort: 5003
       protocol: TCP
       # targetPort: 5003
       nodePort: {{ .Values.service.nodePort }}
